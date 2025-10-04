@@ -47,7 +47,7 @@ Complete all the exercises in this assignment and push your code to GitHub using
 - `insert_books.js`: Script to populate your MongoDB database with sample book data
 
 ## Requirements
-<img width="1366" height="768" alt="Screenshot (9)" src="https://github.com/user-attachments/assets/03cb6c0f-416d-40c2-b1a1-6565f4c12e6c" />
+
 
 - Node.js (v18 or higher)
 - MongoDB (local installation or Atlas account)
