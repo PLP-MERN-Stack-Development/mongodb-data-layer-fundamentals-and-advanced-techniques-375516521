@@ -57,9 +57,4 @@ Complete all the exercises in this assignment and push your code to GitHub using
 
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) <img width="1366" height="768" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/3c8bf07b-8a51-4a98-a3a0-53d61b5cfbde" />
-<img width="1366" height="768" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/5be52fe5-4294-4853-b0f3-8419262e0a58" />
-<img width="1366" height="768" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/c1615c8a-7072-450e-baa1-00129ba4e521" />
-<img width="1366" height="768" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/f502dfdb-9e4b-4b1a-a8c9-79be65fb1348" />
-<img width="1366" height="768" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/d225bae3-3e8c-4b1c-9c1e-682450f9c8b8" />
-<img width="1366" height="768" alt="Screenshot (10)" src="https://github.com/user-attachments/assets/9dd41c8f-e284-420c-9380-dc7af239e8bd" />
+- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
