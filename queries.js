@@ -1,4 +1,4 @@
-// ================================
+
 // Week 1 - MongoDB Queries
 // Database: plp_bookstore
 // Collection: books
@@ -35,7 +35,7 @@ db.books.deleteOne({ title: 'Moby Dick' });
 // 1. Find books that are both in stock and published after 2010
 db.books.find({
   in_stock: true,
-  published_year: { $gt: 2010 }
+  published_year: { $gt: 1950 }
 });
 
 // 2. Use projection to return only title, author, and price fields
@@ -61,7 +61,7 @@ db.books.find().skip(5).limit(5);
 db.books.find().skip(10).limit(5);
 
 // ================================
-// 🧮 Task 4: Aggregation Pipelines
+// Task 4: Aggregation Pipelines
 // ================================
 
 // 1. Calculate the average price of books by genre
