@@ -1,60 +1,193 @@
-# MongoDB Fundamentals - Week 1
 
-## Setup Instructions
+# 📚 MongoDB Data Layer Fundamentals — Week 1
 
-Before you begin this assignment, please make sure you have the following installed:
+This project demonstrates basic and advanced MongoDB operations using both the **MongoDB Shell (`mongosh`)** and **MongoDB Compass**.  
+It covers:
+- Installation & setup
+- Inserting sample data
+- Performing CRUD operations
+- Running advanced queries & aggregation pipelines
+- Implementing indexes for performance
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+The project uses a database called **`plp_bookstore`** and a collection named **`books`**.
 
-### Node.js Package Setup
+---
 
-Once you have Node.js installed, run the following commands in your assignment directory:
+## 🛠️ Requirements
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org) (v16+)
+- [MongoDB Community Edition](https://www.mongodb.com/try/download/community)
+- [MongoDB Shell (`mongosh`)](https://www.mongodb.com/docs/mongodb-shell/install/)
+- [MongoDB Compass](https://www.mongodb.com/products/compass) (GUI client)
+
+---
+
+## 📂 Project Structure
+
+```
+
+.
+├── insert_books.js   # Script to populate the database with sample data
+├── queries.js        # MongoDB shell queries
+├── README.md         # Project documentation
+
+```
+
+---
+
+## 🚀 How to Run the Project
+
+### 1. **Start MongoDB Service (Windows)**
+
+If you're facing connection errors, your MongoDB service may not be running.  
+You can start it manually using `services.msc`:
+
+1. Press **Win + R**
+2. Type:
+```
+
+services.msc
+
+```
+and press **Enter**
+3. In the Services window, scroll to find:
+```
+
+MongoDB Server (MongoDB)
+
+```
+4. Right-click it → **Start**  
+(or **Restart** if it’s already running)
+
+Once started, MongoDB will be available at:
+```
+
+mongodb://127.0.0.1:27017
+
+````
+
+---
+
+### 2. **Insert Sample Data**
+
+Open **Command Prompt** in your project folder and run:
 
 ```bash
-# Initialize a package.json file
-npm init -y
+node insert_books.js
+````
 
-# Install the MongoDB Node.js driver
+This will insert at least 10 sample book documents into the `books` collection of the `plp_bookstore` database.
+
+---
+
+### 3. **Run Queries Using mongosh**
+
+Start MongoDB shell:
+
+```bash
+mongosh
+```
+
+Switch to the database:
+
+```javascript
+use plp_bookstore
+```
+
+Run any queries manually, for example:
+
+```javascript
+db.books.find().pretty()
+db.books.find({ genre: "Fiction" }).pretty()
+```
+
+Or run **all the queries** in `queries.js` automatically:
+
+```bash
+mongosh < queries.js
+```
+
+---
+
+### 4. **Explore Data Using MongoDB Compass**
+
+You can also use MongoDB Compass for a GUI experience:
+
+1. Open **MongoDB Compass**
+2. In the connection string field, enter:
+
+   ```
+   mongodb://127.0.0.1:27017
+   ```
+3. Click **Connect**
+4. In the sidebar, click on the **`plp_bookstore`** database → select the **`books`** collection
+
+From here you can:
+
+* Browse data visually
+* Run filter queries using JSON
+* Create and view indexes
+* Build aggregation pipelines with a drag-and-drop interface
+
+---
+
+## 🧠 Troubleshooting
+
+### ❌ `mongosh` not connecting / ECONNREFUSED
+
+* Start MongoDB using `services.msc` (as shown above)
+* Check that port **27017** is available
+* Try connecting manually:
+
+  ```bash
+  mongosh mongodb://127.0.0.1:27017
+  ```
+
+### ❌ “Cannot find module 'mongodb'” in Node
+
+Install the MongoDB Node.js driver:
+
+```bash
 npm install mongodb
 ```
 
-## Assignment Overview
+Then re-run the script.
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+---
 
-## Submission
+## 🧪 Expected Outcome
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
+* A working MongoDB database with properly structured book data
+* Successful CRUD and advanced query execution
+* Working aggregation pipelines
+* Indexed fields with performance improvements shown via `explain()`
+* Visual confirmation of your data in **MongoDB Compass**
 
-## Getting Started
+---
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
-
-## Files Included
-
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
-
-## Requirements
+## 📝 How to Clone and Run
 
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
 
-## Resources
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/mongodb-data-layer-fundamentals-and-advanced-techniques-375516521.git
+cd mongodb-data-layer-fundamentals-and-advanced-techniques-375516521.git
+npm install
+node insert_books.js
+mongosh < queries.js
+```
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+Then open **MongoDB Compass** to explore the data.
+
+---
+
+## ✨ Author
+
+* CHARLES WAMBUA
+ — MongoDB Data Layer Fundamentals
+* PLP MERN Project
+
+```
+
