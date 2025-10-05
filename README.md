@@ -174,7 +174,6 @@ Then re-run the script.
 ```bash
 git clone https://github.com/PLP-MERN-Stack-Development/mongodb-data-layer-fundamentals-and-advanced-techniques-375516521.git
 cd mongodb-data-layer-fundamentals-and-advanced-techniques-375516521.git
-npm install
 node insert_books.js
 mongosh < queries.js
 ```
